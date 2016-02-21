@@ -1,0 +1,348 @@
+body {
+  background: #333;
+  overflow-x: hidden;
+}
+footer {
+  color: red;
+}
+h1 {
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  left: 50%;
+  margin-left: -180px;
+  top: 15px;
+}
+
+#coin {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ccc;
+  border: #999 solid 2px;
+  top: 30px;
+  left: 50%;
+  position: absolute;
+  animation: glow 1s alternate infinite;
+  cursor: pointer;
+  z-index: 3;
+}
+#coin.active {
+  animation: none;
+}
+
+.money {
+  width: 120px;
+  height: 60px;
+  position: absolute;
+  z-index: -1;
+  border: solid 2px #006600;
+}
+.money .pres {
+  margin: 0 auto;
+  margin-top: 10px;
+  height: 40px;
+  width: 30px;
+  background: #006600;
+  border-radius: 50%;
+}
+.money#bill1 {
+  background: #009933;
+  left: 50%;
+  top: 200px;
+  transform: rotate(20deg);
+}
+.money#bill1.fly {
+  animation: billfly1 1s infinite;
+}
+.money#bill2 {
+  background: #009933;
+  left: 50%;
+  top: 200px;
+  transform: rotate(-10deg);
+}
+.money#bill2.fly {
+  animation: billfly2 1s infinite;
+}
+.money#bill3 {
+  background: #009933;
+  left: 50%;
+  top: 200px;
+  transform: rotate(40deg);
+}
+.money#bill3.fly {
+  animation: billfly3 1s infinite;
+}
+.money#bill4 {
+  background: #009933;
+  left: 50%;
+  top: 200px;
+  transform: rotate(5deg);
+}
+.money#bill4.fly {
+  animation: billfly4 1s infinite;
+}
+.money#bill5 {
+  background: #009933;
+  left: 50%;
+  top: 200px;
+  transform: rotate(-30deg);
+}
+.money#bill5.fly {
+  animation: billfly5 1s infinite;
+}
+.money#bill6 {
+  background: #009933;
+  left: 50%;
+  top: 200px;
+  transform: rotate(-10deg);
+}
+.money#bill6.fly {
+  animation: billfly6 1s infinite;
+}
+
+.piggy {
+  width: 400px;
+  height: 300px;
+  background: #FF6666;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 100px;
+  position: relative;
+}
+.piggy .insert {
+  width: 120px;
+  height: 10px;
+  left: 160px;
+  top: 15px;
+  position: absolute;
+  background: #333;
+  border-top: solid 3px #777;
+  border-radius: 50% 50% 30% 30%;
+}
+.piggy .cover {
+  background: #FF6666;
+  width: 115px;
+  height: 50px;
+  position: absolute;
+  top: 55px;
+  left: 70px;
+  transform: rotate(45deg);
+  z-index: 6;
+}
+.piggy .coin-cover {
+  position: absolute;
+  z-index: 4;
+  background: #FF6666;
+  height: 80px;
+  width: 80px;
+  left: 190px;
+  top: 28px;
+}
+.piggy .right-ear, .piggy .left-ear {
+  border-radius: 50%;
+  position: absolute;
+  left: 100px;
+  z-index: 5;
+}
+.piggy .right-ear .inset, .piggy .left-ear .inset {
+  position: absolute;
+  background: #FFABAB;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.piggy .right-ear .outset, .piggy .left-ear .outset {
+  position: absolute;
+  background: #FF7373;
+  width: 115px;
+  height: 115px;
+  top: -10px;
+  border-radius: 50%;
+}
+.piggy .left-ear {
+  left: 5px;
+  z-index: -1;
+}
+.piggy .eye1 {
+  z-index: 10;
+  position: absolute;
+  background: #333;
+  height: 25px;
+  width: 15px;
+  border-radius: 50%;
+  top: 80px;
+  left: 30px;
+}
+.piggy .eye2 {
+  z-index: 10;
+  position: absolute;
+  background: #333;
+  height: 25px;
+  width: 15px;
+  border-radius: 50%;
+  top: 80px;
+  left: 90px;
+}
+.piggy .nose {
+  position: absolute;
+  top: 120px;
+  left: -20px;
+  width: 120px;
+  height: 100px;
+  border-radius: 50%;
+  background: #FF7575;
+}
+.piggy .nose .nostril1 {
+  position: absolute;
+  background: #444;
+  height: 30px;
+  width: 15px;
+  border-radius: 50%;
+  top: 40px;
+  left: 15px;
+}
+.piggy .nose .nostril2 {
+  position: absolute;
+  background: #444;
+  height: 30px;
+  width: 15px;
+  border-radius: 50%;
+  top: 40px;
+  left: 50px;
+}
+.piggy #blush {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #FF3333;
+  top: 150px;
+  left: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 10px #FF3333;
+  display: none;
+}
+.piggy .mouth {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: transparent;
+  border-bottom: black solid 5px;
+  border-radius: 0 0 5% 5%;
+  bottom: 60px;
+  left: 40px;
+}
+.piggy .mouth.smile {
+  animation: smile 1s ease forwards;
+}
+.piggy .foot {
+  height: 60px;
+  width: 80px;
+  position: absolute;
+  bottom: -15px;
+}
+.piggy .foot.foot1 {
+  z-index: -1;
+  left: 50px;
+  background: #FF7575;
+  border-radius: 0 0 50% 30%;
+  transform: skew(-20deg);
+}
+.piggy .foot.foot2 {
+  z-index: -1;
+  left: 225px;
+  background: #FF7575;
+  border-radius: 0 0 30% 50%;
+  transform: skew(20deg);
+}
+.piggy .foot.foot3 {
+  z-index: 2;
+  left: 110px;
+  background: #FF7575;
+  border-radius: 30% 50% 50% 30%;
+  transform: skew(-20deg);
+}
+.piggy .foot.foot4 {
+  z-index: 2;
+  left: 260px;
+  background: #FF7575;
+  border-radius: 50% 30% 30% 50%;
+  transform: skew(20deg);
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #FFFF94;
+  }
+  to {
+    box-shadow: 0 0 10px 5px #FFFF94;
+  }
+}
+@keyframes smile {
+  from {
+    border-radius: 0 0 5% 5%;
+  }
+  to {
+    border-radius: 0 0 50% 20%;
+  }
+}
+@keyframes billfly1 {
+  from {
+    left: 50%;
+    top: 200px;
+  }
+  to {
+    left: 110%;
+    top: 300px;
+  }
+}
+@keyframes billfly2 {
+  from {
+    left: 50%;
+    top: 200px;
+  }
+  to {
+    left: 110%;
+    top: 150px;
+  }
+}
+@keyframes billfly3 {
+  from {
+    left: 50%;
+    top: 200px;
+  }
+  to {
+    left: 110%;
+    top: 180px;
+  }
+}
+@keyframes billfly4 {
+  from {
+    left: 50%;
+    top: 200px;
+  }
+  to {
+    left: 110%;
+    top: 100px;
+  }
+}
+@keyframes billfly5 {
+  from {
+    left: 50%;
+    top: 200px;
+  }
+  to {
+    left: 110%;
+    top: 190px;
+  }
+}
+@keyframes billfly6 {
+  from {
+    left: 50%;
+    top: 200px;
+  }
+  to {
+    left: 110%;
+    top: 250px;
+  }
+}
