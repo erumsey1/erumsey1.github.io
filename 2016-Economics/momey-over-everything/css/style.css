@@ -1,0 +1,30 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+  cursor:none;
+	background: #f2f9fe;
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f2f9fe), color-stop(100%,#d6f0fd));
+	background: -webkit-radial-gradient(center, ellipse cover, #f2f9fe 0%,#d6f0fd 100%);
+	background: radial-gradient(ellipse at center, #f2f9fe 0%,#d6f0fd 100%);
+}
+canvas{
+	display:block;
+}
+#money{
+	position:absolute;
+	font-size:60px;
+	font-family:sans-serif;
+	font-weight:bold;
+	color:gold;
+	left:50%;
+ 	top:40%;
+	text-shadow:0 5px 3px rgba(0,0,0,0.5);
+	animation:breeze 1s infinite ease;
+} 
+@keyframes breeze{
+	0% {  font-size:60px;}
+	50% {  font-size:70px;}
+	100% {  font-size:60px;}
+}

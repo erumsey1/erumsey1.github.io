@@ -1,0 +1,7 @@
+/ You don't need to put the same amount of rows and columns
+/ No matter how many you put, there will always be only 9 matrices calculation
+#container
+  - (1..5).each do |i|
+    .row
+      - (1..5).each do |j|
+        .cell#cell{:id => [i, j]}

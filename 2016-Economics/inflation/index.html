@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Inflating tiles</title>
+    
+    
+    <link rel="stylesheet" href="css/normalize.css">
+
+    
+        <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      #container {
+  /* Tiles don't need to be squares */
+  width: 400px;
+  height: 400px;
+  /* cheating to avoid some white pixels showing (rounding error) */
+  background: black;
+  /* remove white-spaces */
+  font-size: 0;
+}
+#container .row {
+  height: 20%;
+  box-sizing: border-box;
+}
+#container .row .cell {
+  /* reset font-size */
+  font-size: 1rem;
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  transform-origin: 0px 0px 0px;
+  /* transition problem: CSS will animate all numbers from the transform matrix */
+  /* but it does not mean every point will move straight from where it was to where it will be */
+  /* they can take strange paths */
+  /* transition might have to be done in JS but it seems to be a heavy feature (matrices calculation at every step) */
+  /*You can still try if you want :)*/
+  /*transition: transform .1s;*/
+  border: 1px solid black;
+}
+
+/* Random cell colors */
+#cell_1_1 {
+  background-color: #997500;
+}
+
+#cell_1_2 {
+  background-color: #99001c;
+}
+
+#cell_1_3 {
+  background-color: #997800;
+}
+
+#cell_1_4 {
+  background-color: #009994;
+}
+
+#cell_1_5 {
+  background-color: #99007d;
+}
+
+#cell_2_1 {
+  background-color: #999100;
+}
+
+#cell_2_2 {
+  background-color: #00990f;
+}
+
+#cell_2_3 {
+  background-color: #000d99;
+}
+
+#cell_2_4 {
+  background-color: #998500;
+}
+
+#cell_2_5 {
+  background-color: #990057;
+}
+
+#cell_3_1 {
+  background-color: #990061;
+}
+
+#cell_3_2 {
+  background-color: #998c00;
+}
+
+#cell_3_3 {
+  background-color: #009970;
+}
+
+#cell_3_4 {
+  background-color: #009975;
+}
+
+#cell_3_5 {
+  background-color: #7a9900;
+}
+
+#cell_4_1 {
+  background-color: #008299;
+}
+
+#cell_4_2 {
+  background-color: #990087;
+}
+
+#cell_4_3 {
+  background-color: #269900;
+}
+
+#cell_4_4 {
+  background-color: #994d00;
+}
+
+#cell_4_5 {
+  background-color: #99003b;
+}
+
+#cell_5_1 {
+  background-color: #850099;
+}
+
+#cell_5_2 {
+  background-color: #004599;
+}
+
+#cell_5_3 {
+  background-color: #009973;
+}
+
+#cell_5_4 {
+  background-color: #009999;
+}
+
+#cell_5_5 {
+  background-color: #001299;
+}
+
+    </style>
+
+    
+        <script src="js/prefixfree.min.js"></script>
+
+    
+  </head>
+
+  <body>
+
+    <!-- You don't need to put the same amount of rows and columns -->
+<!-- No matter how many you put, there will always be only 9 matrices calculation -->
+<div id='container'>
+  <div class='row'>
+    <div class='cell' id='cell_1_1'></div>
+    <div class='cell' id='cell_1_2'></div>
+    <div class='cell' id='cell_1_3'></div>
+    <div class='cell' id='cell_1_4'></div>
+    <div class='cell' id='cell_1_5'></div>
+  </div>
+  <div class='row'>
+    <div class='cell' id='cell_2_1'></div>
+    <div class='cell' id='cell_2_2'></div>
+    <div class='cell' id='cell_2_3'></div>
+    <div class='cell' id='cell_2_4'></div>
+    <div class='cell' id='cell_2_5'></div>
+  </div>
+  <div class='row'>
+    <div class='cell' id='cell_3_1'></div>
+    <div class='cell' id='cell_3_2'></div>
+    <div class='cell' id='cell_3_3'></div>
+    <div class='cell' id='cell_3_4'></div>
+    <div class='cell' id='cell_3_5'></div>
+  </div>
+  <div class='row'>
+    <div class='cell' id='cell_4_1'></div>
+    <div class='cell' id='cell_4_2'></div>
+    <div class='cell' id='cell_4_3'></div>
+    <div class='cell' id='cell_4_4'></div>
+    <div class='cell' id='cell_4_5'></div>
+  </div>
+  <div class='row'>
+    <div class='cell' id='cell_5_1'></div>
+    <div class='cell' id='cell_5_2'></div>
+    <div class='cell' id='cell_5_3'></div>
+    <div class='cell' id='cell_5_4'></div>
+    <div class='cell' id='cell_5_5'></div>
+  </div>
+</div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,49 @@
+//Must match with Haml
+$rows: 5;
+$cols: 5;
+
+#container
+{
+  /* Tiles don't need to be squares */
+  width: 400px;
+  height: 400px;
+  /* cheating to avoid some white pixels showing (rounding error) */
+  background: black;
+  /* remove white-spaces */
+  font-size: 0;
+  .row
+  {
+    height: 100% / $rows;
+    box-sizing: border-box;
+    .cell
+    {
+      /* reset font-size */
+      font-size: 1rem;
+      width: 100% / $cols;
+      height: 100%;
+      display: inline-block;
+      box-sizing: border-box;
+      transform-origin: 0px 0px 0px;
+      /* transition problem: CSS will animate all numbers from the transform matrix */
+      /* but it does not mean every point will move straight from where it was to where it will be */
+      /* they can take strange paths */
+      /* transition might have to be done in JS but it seems to be a heavy feature (matrices calculation at every step) */
+      
+      /*You can still try if you want :)*/
+      /*transition: transform .1s;*/
+      border: 1px solid black
+    }
+  }
+}
+
+/* Random cell colors */
+@for $i from 1 through $rows
+{
+  @for $j from 1 through $cols
+  {
+    #cell_#{$i}_#{$j}
+    {
+      background-color: hsl(random(360), 100%, 30%);
+    }
+  }
+}

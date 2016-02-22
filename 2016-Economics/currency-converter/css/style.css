@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+input, button, select {
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+.controlsWrap {
+  float: left;
+  width: 100%;
+}
+
+.fromCurrency, .toCurrency {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.fromCurrency select, .toCurrency select {
+  border-radius: 10px;
+  display: block;
+  float: left;
+  margin-left: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 30px;
+  width: 80px;
+}
+.fromCurrency input, .toCurrency input, .fromCurrency label, .toCurrency label {
+  float: left;
+  width: 100%;
+  padding: 20px 0 20px 120px;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.fromCurrency input {
+  background: #4CB5AB;
+}
+.fromCurrency select {
+  background: #419d94;
+}
+
+.toCurrency label {
+  border-top: 2px solid #419d94;
+  background: #4CB5AB;
+  color: rgba(255, 255, 255, 0.5);
+}
+.toCurrency label span.appear {
+  animation: appear .2s;
+}
+.toCurrency select {
+  color: rgba(255, 255, 255, 0.5);
+  background: #419d94;
+}
+.toCurrency #switchCurrency {
+  top: 0px;
+  right: 20px;
+  padding: 10px;
+  transform: translateY(-50%);
+  position: absolute;
+  background: #398b83;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  border-radius: 3px;
+  transition: transform .3s;
+  transition: all .3s;
+}
+.toCurrency #switchCurrency:hover {
+  background: #36837c;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes appear {
+  0%,100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+.keyboard {
+  padding: 1px;
+  width: 100%;
+  height: calc(100% - 130px);
+  float: left;
+  background: #419d94;
+}
+.keyboard button {
+  width: 33.3333%;
+  float: left;
+  display: block;
+  font-size: 22px;
+  height: 25%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #419d94;
+  background: #4CB5AB;
+}
